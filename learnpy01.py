@@ -22,7 +22,7 @@ plt.ylabel('股价')
 plt.title('中国平安收盘价，MA5，MA20时间序列')
 
 #%% 获取中国平安全部历史数据
-ZGPA_all=ts.get_h_data('000001',start='2019-01-01')
+ZGPA_all=ts.get_h_data('002352',start='2018-01-01')
 ZGPA_all.index=pd.to_datetime(ZGPA_all.index)
 
 #%% 相关指数
