@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/opt/anaconda3/bin/python
 # -*- coding:utf-8 -*-
 # Author:huaixiangdong
 
@@ -21,6 +21,7 @@ plt.xlabel('日期')
 plt.ylabel('股价')
 plt.title('中国平安收盘价，MA5，MA20时间序列')
 
+
 #%% 获取中国平安全部历史数据
 ZGPA_all=ts.get_h_data('002352',start='2018-01-01')
 ZGPA_all.index=pd.to_datetime(ZGPA_all.index)
@@ -37,3 +38,4 @@ plt.title('中国平安收盘价时间序列(2006至今)')
 ZPGA_Return=((ZGPA_all['close']-ZGPA_all['close'].shift(1))/ZGPA_all['close'].shift(1)).dropna() #收益率
 plt.plot(ZPGA_Return)
 print('中国平安的平均日收益率：',ZPGA_Return.mean(),'\n中国平安的收益率标准差：',ZPGA_Return.std())
+plt.show()
