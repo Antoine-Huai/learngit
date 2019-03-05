@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+
 # -*- coding:utf-8 -*-
 # Author:huaixiangdong
 
@@ -18,11 +18,11 @@ for i in range(len(ZGLT_close0)-1):
 for i in range(len(ZGLT_Return)):
        if ZGLT_Return[i]<-0.04:
            ZGLT_Return[i]=0.01
-for i in range(len(ZGLT_Return)-1):
-      ZGLT_close1[i+1]= ZGLT_Return[i+1]*ZGLT_close0[i]+ZGLT_close0[i]
+#for i in range(len(ZGLT_Return)-1):
+#      ZGLT_close1[i+1]= ZGLT_Return[i+1]*ZGLT_close0[i]+ZGLT_close0[i]
 
 import matplotlib.pyplot as plt
 plt.plot(ZGLT_close0, marker='o', label='ZGLT_close0')
-plt.plot(ZGLT_close1, marker='*',label='ZGLT_close1')
+# plt.plot(ZGLT_close1, marker='*',label='ZGLT_close1')
 plt.legend()
 plt.show()
